@@ -1,0 +1,21 @@
+AppBundle\Entity\User:
+    type: entity
+    table: fos_user
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+        smsId:
+            type: string
+            nullable: true
+    manyToMany:
+        meetings:
+            targetEntity: Meeting
+            mappedBy: guests
+    lifecycleCallbacks: {  }

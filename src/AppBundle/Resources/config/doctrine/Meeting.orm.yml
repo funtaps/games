@@ -1,0 +1,27 @@
+AppBundle\Entity\Meeting:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\MeetingRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        date:
+            type: datetime
+            unique: true
+    manyToMany:
+        guests:
+            targetEntity: User
+            inversedBy: meetings
+            joinTable:
+              name: meeting_guests
+              inverseJoinColumns:
+                meeting_id:
+                  referencedColumnName: id
+              joinColumns:
+                user_id:
+                  referencedColumnName: id
+    lifecycleCallbacks: {  }

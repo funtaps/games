@@ -1,0 +1,142 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * User
+ */
+class User
+{
+    /**
+     * @var integer
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $login;
+
+    /**
+     * @var string
+     */
+    private $name;
+
+    /**
+     * @var string
+     */
+    private $passwordHash;
+
+    /**
+     * @var string
+     */
+    private $smsId;
+
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set login
+     *
+     * @param string $login
+     *
+     * @return User
+     */
+    public function setLogin($login)
+    {
+        $this->login = $login;
+
+        return $this;
+    }
+
+    /**
+     * Get login
+     *
+     * @return string
+     */
+    public function getLogin()
+    {
+        return $this->login;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return User
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set passwordHash
+     *
+     * @param string $passwordHash
+     *
+     * @return User
+     */
+    public function setPasswordHash($passwordHash)
+    {
+        $this->passwordHash = $passwordHash;
+
+        return $this;
+    }
+
+    /**
+     * Get passwordHash
+     *
+     * @return string
+     */
+    public function getPasswordHash()
+    {
+        return $this->passwordHash;
+    }
+
+    /**
+     * Set smsId
+     *
+     * @param string $smsId
+     *
+     * @return User
+     */
+    public function setSmsId($smsId)
+    {
+        $this->smsId = $smsId;
+
+        return $this;
+    }
+
+    /**
+     * Get smsId
+     *
+     * @return string
+     */
+    public function getSmsId()
+    {
+        return $this->smsId;
+    }
+}
+
